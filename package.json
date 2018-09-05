@@ -1,0 +1,62 @@
+{
+  "name": "generator-rest-api",
+  "version": "1.0.0",
+  "description": "A Yeoman generator that creates a basic REST API written using ExpressJS and TypeScript",
+  "main": "dist/index.js",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "deploy": "echo 'no deploy script defined, put your own deploy script here.'",
+    "gen-docs": "typedoc --excludeExternals --externalPattern \"**/node_modules/**\" --ignoreCompilerErrors --out ./docs ./src",
+    "serve": "ts-node-dev src/index.ts",
+    "start": "tsc && node ./dist/index.js",
+    "test": "ts-node test/index.ts",
+    "test:script": "ts-node -- test/test:script",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "rest",
+    "api",
+    "express",
+    "generator"
+  ],
+  "author": "Donald Isaac",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "boom": "^7.2.0",
+    "compression": "^1.7.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.0",
+    "mongoose": "^5.2.6",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^2.0.0",
+    "@types/bluebird": "^3.5.23",
+    "@types/body-parser": "^1.17.0",
+    "@types/boom": "^7.2.0",
+    "@types/compression": "0.0.36",
+    "@types/dotenv": "^4.0.3",
+    "@types/express": "^4.16.0",
+    "@types/express-validator": "^3.0.0",
+    "@types/mongoose": "^5.2.3",
+    "@types/morgan": "^1.7.35",
+    "@types/passport": "^0.4.6",
+    "@types/passport-local": "^1.0.33",
+    "@types/winston": "^2.3.9",
+    "supertest": "^3.1.0",
+    "ts-node": "^7.0.0",
+    "ts-node-dev": "^1.0.0-pre.26",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  }
+}
